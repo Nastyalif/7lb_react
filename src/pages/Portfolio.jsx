@@ -1,3 +1,4 @@
+// Сторінка «Портфоліо»: маршрут /portfolio, вміст рендериться всередині Layout (Outlet).
 export default function Portfolio() {
   return (
     <article className="page">

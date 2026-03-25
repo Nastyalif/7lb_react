@@ -1,3 +1,4 @@
+// Сторінка «Послуги»: маршрут /services.
 export default function Services() {
   return (
     <article className="page">

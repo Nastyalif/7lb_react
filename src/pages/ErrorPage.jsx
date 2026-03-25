@@ -1,6 +1,8 @@
+// Сторінка помилок: підключена в router як errorElement, отримує помилку маршруту з контексту.
 import { isRouteErrorResponse, useRouteError, Link } from 'react-router-dom'
 
 export default function ErrorPage() {
+  // Остання помилка з навігації / loader (наприклад Response 404).
   const error = useRouteError()
   const is404 =
     isRouteErrorResponse(error) && error.status === 404
@@ -18,6 +20,7 @@ export default function ErrorPage() {
               : 'Сталася несподівана помилка.'}
       </p>
       <p>
+        {/* Link — клієнтський перехід на головну без повного перезавантаження сторінки */}
         <Link to="/" className="error-page__link">
           На головну
         </Link>

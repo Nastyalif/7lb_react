@@ -1,3 +1,4 @@
+// Сторінка «Головна»: відображається за маршрутом / (index route у вкладених children).
 export default function Home() {
   return (
     <article className="page">

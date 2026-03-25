@@ -1,3 +1,4 @@
+// Сторінка «Зв'язатися зі мною»: маршрут /contact.
 export default function Contact() {
   return (
     <article className="page">

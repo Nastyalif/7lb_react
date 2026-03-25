@@ -1,0 +1,107 @@
+:root {
+  --text: #5c564f;
+  --text-h: #1a1816;
+  --bg: #faf8f5;
+  --header-bg: rgba(255, 255, 255, 0.72);
+  --border: #e8e4dd;
+  --accent: #8b6914;
+  --accent-soft: rgba(139, 105, 20, 0.12);
+
+  --sans: 'Segoe UI', system-ui, sans-serif;
+  --heading: Georgia, 'Times New Roman', serif;
+
+  font: 17px/155% var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #c4bdb4;
+    --text-h: #f5f1ea;
+    --bg: #141210;
+    --header-bg: rgba(20, 18, 16, 0.85);
+    --border: #2e2a26;
+    --accent: #d4a84b;
+    --accent-soft: rgba(212, 168, 75, 0.15);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin: 0 0 1rem;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 1.75rem 0 0.5rem;
+}
+
+p {
+  margin: 0 0 0.85rem;
+}
+
+.page .lead {
+  font-size: 1.05rem;
+  max-width: 40rem;
+}
+
+.page ul {
+  margin: 0 0 1rem;
+  padding-left: 1.35rem;
+}
+
+.page li {
+  margin-bottom: 0.4rem;
+}
+
+.error-page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.error-page h1 {
+  margin-bottom: 0.75rem;
+}
+
+.error-page__link {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.error-page__link:hover {
+  text-decoration: none;
+}
